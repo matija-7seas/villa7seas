@@ -424,13 +424,15 @@ textarea{min-height:110px;resize:vertical}
 input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 22%,transparent)}
 .send{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
 .hint{font-size:13px;color:var(--muted)}
-.contacts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:20px}
+.contacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:16px;margin-top:20px}
+.contacts .contact:last-child:nth-child(odd){grid-column:1/-1}
 @media (max-width:620px){.contacts{grid-template-columns:1fr}}
 .contact{background:var(--card);border-radius:var(--r-md);padding:18px 20px;display:flex;align-items:center;gap:12px;justify-content:space-between;min-width:0}
 .contact div{min-width:0}
 .contact small{display:block;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
 .contact span{font-weight:500;user-select:all;overflow-wrap:anywhere}
 
+.foot-ig{color:var(--accent);text-decoration:none;font-weight:600}.foot-ig:hover{text-decoration:underline}
 footer{padding-block:40px 120px;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
 
@@ -816,6 +818,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
       <div class="contacts">
         <div class="contact"><div><small>WhatsApp</small><span id="c-phone">+385 97 6121 392</span></div><button type="button" class="btn btn-ghost btn-sm" data-copy="c-phone" data-i18n="copy">Kopiraj</button></div>
         <div class="contact"><div><small>E-mail</small><span id="c-mail">info@villa7seas.com</span></div><button type="button" class="btn btn-ghost btn-sm" data-copy="c-mail" data-i18n="copy">Kopiraj</button></div>
+        <div class="contact"><div><small>Instagram</small><span>@villa7seas</span></div><a class="btn btn-ghost btn-sm" href="https://www.instagram.com/villa7seas/" target="_blank" rel="noopener" aria-label="Instagram @villa7seas">Instagram ↗</a></div>
       </div>
     </div>
   </section>
@@ -824,7 +827,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 <footer>
   <div class="wrap">
     <div class="foot-logo"><svg aria-hidden="true"><use href="#v7s-mark"/></svg><span class="wm"><small>VILLA</small><b>7 SEAS</b></span></div>
-    <div class="meta"><span>Donje Raštane, Zadar · <span data-i18n="footCountry">Hrvatska</span></span>
+    <div class="meta"><a class="foot-ig" href="https://www.instagram.com/villa7seas/" target="_blank" rel="noopener">Instagram @villa7seas</a><span>Donje Raštane, Zadar · <span data-i18n="footCountry">Hrvatska</span></span>
     <span data-i18n="footNote">Slike su vizualizacije projekta.</span>
     <span class="priv" data-i18n="footPriv">Privatnost: stranica ne koristi kolačiće za praćenje ni analitiku, a u vašem pregledniku pamti samo odabrani jezik. Podaci iz upita ne spremaju se na stranici, nego idu izravno domaćinu putem WhatsAppa ili e-pošte.</span></div>
   </div>
